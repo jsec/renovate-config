@@ -9,6 +9,21 @@
     "replacements:all",
     "workarounds:all"
   ],
+  "labels": ["dependencies"],
+  "separateMajorMinor": "false",
+  "packageRules": [
+    {
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["major", "minor", "patch", "pin", "digest", "lockFileMaintenance", "rollback", "bump"],
+      "groupName": "devDependencies",
+      "automerge": true
+    },
+    {
+      "matchDepTypes": ["dependencies"],
+      "matchUpdateTypes": ["major", "minor", "patch", "pin", "digest", "lockFileMaintenance", "rollback", "bump"],
+      "groupName": "dependencies"
+    }
+  ]
   "schedule": [
     "before 3am on Monday"
   ]
