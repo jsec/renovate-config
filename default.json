@@ -23,7 +23,7 @@
       "matchUpdateTypes": ["major", "minor", "patch", "pin", "digest", "lockFileMaintenance", "rollback", "bump"],
       "groupName": "dependencies"
     }
-  ]
+  ],
   "schedule": [
     "before 3am on Monday"
   ]
