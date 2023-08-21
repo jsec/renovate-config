@@ -4,9 +4,14 @@
     ":dependencyDashboard",
     ":semanticPrefixFixDepsChoreOthers",
     "group:monorepos",
-    "group:recommended",
+    "group:definitelyTyped",
+    "group:linters",
+    "group:nodeJs",
+    "group:test",
+    "helpers:disableTypesNodeMajor",
     "replacements:all",
-    "workarounds:all"
+    "workarounds:all",
+    "packages:linters"
   ],
   "labels": ["dependencies"],
   "separateMajorMinor": "true",
@@ -23,6 +28,6 @@
     }
   ],
   "schedule": [
-    "before 3am on Monday"
+    "before 11pm on Sunday"
   ]
 }
