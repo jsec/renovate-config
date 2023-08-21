@@ -4,14 +4,7 @@
     ":dependencyDashboard",
     ":semanticPrefixFixDepsChoreOthers",
     "group:monorepos",
-    "group:definitelyTyped",
-    "group:linters",
-    "group:nodeJs",
-    "group:test",
-    "helpers:disableTypesNodeMajor",
-    "replacements:all",
-    "workarounds:all",
-    "packages:linters"
+    "group:recommended"
   ],
   "labels": ["dependencies"],
   "separateMajorMinor": "true",
