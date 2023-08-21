@@ -15,16 +15,17 @@
   "packageRules": [
     {
       "matchDepTypes": ["devDependencies"],
-      "matchUpdateTypes": ["major", "minor", "patch", "pin", "digest", "lockFileMaintenance", "rollback", "bump"],
+      "matchUpdateTypes": ["major", "minor", "patch", "pin", "digest", "rollback", "bump"],
       "groupName": "devDependencies"
     },
     {
       "matchDepTypes": ["dependencies"],
-      "matchUpdateTypes": ["major", "minor", "patch", "pin", "digest", "lockFileMaintenance", "rollback", "bump"],
+      "matchUpdateTypes": ["major", "minor", "patch", "pin", "digest", "rollback", "bump"],
       "groupName": "dependencies"
     }
   ],
   "schedule": [
     "before 11pm on Sunday"
-  ]
+  ],
+  "rangeStrategy": "pin"
 }
