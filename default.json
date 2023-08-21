@@ -3,8 +3,11 @@
   "extends": [
     ":dependencyDashboard",
     ":semanticPrefixFixDepsChoreOthers",
+    ":ignoreModulesAndTests",
     "group:monorepos",
-    "group:recommended"
+    "group:recommended",
+    "replacements:all",
+    "workarounds:all"
   ],
   "labels": ["dependencies"],
   "separateMajorMinor": "true",
