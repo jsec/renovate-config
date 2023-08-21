@@ -3,20 +3,18 @@
   "extends": [
     ":dependencyDashboard",
     ":semanticPrefixFixDepsChoreOthers",
-    ":ignoreModulesAndTests",
     "group:monorepos",
     "group:recommended",
     "replacements:all",
     "workarounds:all"
   ],
   "labels": ["dependencies"],
-  "separateMajorMinor": "false",
+  "separateMajorMinor": "true",
   "packageRules": [
     {
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["major", "minor", "patch", "pin", "digest", "lockFileMaintenance", "rollback", "bump"],
-      "groupName": "devDependencies",
-      "automerge": true
+      "groupName": "devDependencies"
     },
     {
       "matchDepTypes": ["dependencies"],
