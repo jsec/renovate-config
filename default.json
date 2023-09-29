@@ -25,7 +25,7 @@
     }
   ],
   "schedule": [
-    "before 11pm on Sunday"
+    "before 3pm on Sunday on the last day of the month"
   ],
   "rangeStrategy": "pin"
 }
