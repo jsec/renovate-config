@@ -27,7 +27,9 @@
     {
       "matchPackageNames": [
         "typescript",
-        "@typescript-eslint
+        "@typescript-eslint"
+      ],
+      "groupName": "typescript"
     {
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["major", "minor", "patch", "pin", "digest", "rollback", "bump"],
