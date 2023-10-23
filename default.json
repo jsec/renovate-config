@@ -1,6 +1,14 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "timezone": "America/Detroit",
+  "assignees": ["jsec"],
+  "labels": ["dependencies"],
+  "rebaseWhen": "never",
+  "minimumReleaseAge": "3 days",
+  "schedule": [
+    "before 3pm on Sunday on the last day of the month"
+  ],
+  "rangeStrategy": "pin",
   "extends": [
     ":dependencyDashboard",
     ":semanticPrefixFixDepsChoreOthers",
@@ -10,9 +18,16 @@
     "replacements:all",
     "workarounds:all"
   ],
-  "labels": ["dependencies"],
   "separateMajorMinor": "true",
   "packageRules": [
+    {
+      "matchPackageNames": ["@types/node"],
+      "allowedVersions": "<21.0.0"
+    },
+    {
+      "matchPackageNames": [
+        "typescript",
+        "@typescript-eslint
     {
       "matchDepTypes": ["devDependencies"],
       "matchUpdateTypes": ["major", "minor", "patch", "pin", "digest", "rollback", "bump"],
@@ -23,9 +38,5 @@
       "matchUpdateTypes": ["major", "minor", "patch", "pin", "digest", "rollback", "bump"],
       "groupName": "dependencies"
     }
-  ],
-  "schedule": [
-    "before 3pm on Sunday on the last day of the month"
-  ],
-  "rangeStrategy": "pin"
+  ]
 }
