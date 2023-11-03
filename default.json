@@ -6,7 +6,7 @@
   "rebaseWhen": "never",
   "minimumReleaseAge": "3 days",
   "schedule": [
-    "before 3pm on Sunday on the last day of the month"
+    "before 7am on the first day of the month"
   ],
   "rangeStrategy": "pin",
   "extends": [
