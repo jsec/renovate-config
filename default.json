@@ -3,11 +3,6 @@
   "timezone": "America/Detroit",
   "assignees": ["jsec"],
   "labels": ["dependencies"],
-  "rebaseWhen": "never",
-  "minimumReleaseAge": "3 days",
-  "schedule": [
-    "before 7am on the first day of the month"
-  ],
   "rangeStrategy": "pin",
   "extends": [
     ":dependencyDashboard",
@@ -23,23 +18,6 @@
     {
       "matchPackageNames": ["@types/node"],
       "allowedVersions": "<21.0.0"
-    },
-    {
-      "matchPackageNames": [
-        "typescript",
-        "@typescript-eslint"
-      ],
-      "groupName": "typescript"
-    },
-    {
-      "matchDepTypes": ["devDependencies"],
-      "matchUpdateTypes": ["major", "minor", "patch", "pin", "digest", "rollback", "bump"],
-      "groupName": "devDependencies"
-    },
-    {
-      "matchDepTypes": ["dependencies"],
-      "matchUpdateTypes": ["major", "minor", "patch", "pin", "digest", "rollback", "bump"],
-      "groupName": "dependencies"
     }
   ]
 }
