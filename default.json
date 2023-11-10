@@ -3,6 +3,9 @@
   "timezone": "America/Detroit",
   "assignees": ["jsec"],
   "labels": ["dependencies"],
+  "schedule": [
+    "every weekend" 
+  ],
   "rangeStrategy": "pin",
   "extends": [
     ":dependencyDashboard",
@@ -18,6 +21,19 @@
     {
       "matchPackageNames": ["@types/node"],
       "allowedVersions": "<21.0.0"
+    },
+    {
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["major", "minor", "patch", "pin", "digest", "rollback", "bump"],
+      "groupName": "devDependencies"
+    },
+    {
+      "matchDepTypes": ["dependencies"],
+      "matchUpdateTypes": ["major", "minor", "patch", "pin", "digest", "rollback", "bump"],
+      "groupName": "dependencies"
     }
-  ]
+  ],
+  "npm": {
+    "minimumReleaseAge": "3 days"
+  }
 }
