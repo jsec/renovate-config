@@ -4,9 +4,9 @@
   "assignees": ["jsec"],
   "labels": ["dependencies"],
   "schedule": [
-    "every weekend" 
+    "after 10pm on friday" 
   ],
-  "rangeStrategy": "pin",
+  "rangeStrategy": "bump",
   "extends": [
     ":dependencyDashboard",
     ":semanticPrefixFixDepsChoreOthers",
