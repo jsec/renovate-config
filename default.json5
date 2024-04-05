@@ -1,9 +1,14 @@
 {
-  "extends": ["config:base", "helpers:pinGitHubActionDigests"],
+  "extends": [
+    "config:recommended", 
+    "helpers:pinGitHubActionDigests",
+    "schedule:monthly"
+  ],
   "prConcurrentLimit": 5,
   "schedule": ["before 3:00am on the last day of every month"],
   "ignoreDeps": [
-    "pnpm"
+    "pnpm",
+    "@types/node"
   ],
   "semanticCommitType": "chore",
   "major": false,
@@ -12,8 +17,7 @@
     {
       "packageNames": ["actions/*"],
       "groupName": "all actions",
-      "groupSlug": "github-actions",
-      "schedule": ["every 4 months"]
+      "groupSlug": "github-actions"
     },
     {
       "matchPackagePatterns": [
@@ -23,34 +27,26 @@
         "stylelint",
         "@typescript-eslint/*"
       ],
-      "matchUpdateTypes": ["minor", "patch", "major"],
+      "matchUpdateTypes": ["minor", "patch"],
       "groupName": "linting dependencies",
       "groupSlug": "linting"
     },
     {
       "matchPackagePatterns": [
-        "jest", 
-        "jest-*", 
         "supertest", 
         "nock", 
         "mocha", 
         "chai",
         "sinon",
-        "ava"
+        "vitest"
       ],
-      "matchUpdateTypes": ["minor", "patch", "major"],
+      "matchUpdateTypes": ["minor", "patch"],
       "groupName": "test dependencies",
       "groupSlug": "test"
     },
     {
-      "matchPackagePatterns": ["npm", "pnpm", "yarn", "@yarnpkg/*"],
+      "matchPackagePatterns": ["@type/*", "typescript", "tsx"],
       "matchUpdateTypes": ["minor", "patch"],
-      "groupName": "package managers",
-      "groupSlug": "pkg-managers",
-    },
-    {
-      "matchPackagePatterns": ["@type/*", "typescript"],
-      "matchUpdateTypes": ["minor", "patch", "major"],
       "groupName": "typescript dependencies",
       "groupSlug": "types"
     }
