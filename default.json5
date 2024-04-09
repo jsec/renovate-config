@@ -44,7 +44,7 @@
       "groupSlug": "test"
     },
     {
-      "matchPackagePatterns": ["@type/*", "typescript", "tsx"],
+      "matchPackagePatterns": ["@types/*", "typescript", "tsx"],
       "matchUpdateTypes": ["minor", "patch"],
       "groupName": "typescript dependencies",
       "groupSlug": "types"
