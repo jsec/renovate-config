@@ -11,7 +11,6 @@
   ],
   "enabledManagers": ["pnpm"],
   "semanticCommitType": "chore",
-  "major": false,
   "labels": ["bot: dependencies"],
   "packageRules": [
     {
