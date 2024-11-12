@@ -1,13 +1,15 @@
 {
   "extends": [
     "config:recommended", 
-    "schedule:monthly"
+    "schedule:monthly",
+    "group:monorepos",
+    
   ],
-  "prConcurrentLimit": 5,
   "ignoreDeps": [
     "pnpm",
     "@types/node"
   ],
+  "enabledManagers": ["pnpm"],
   "semanticCommitType": "chore",
   "major": false,
   "labels": ["bot: dependencies"],
@@ -18,35 +20,46 @@
       "groupSlug": "github-actions"
     },
     {
-      "matchPackagePatterns": [
-        "prettier",
-        "eslint-*",
-        "eslint",
-        "stylelint",
-        "@typescript-eslint/*"
-      ],
-      "matchUpdateTypes": ["minor", "patch"],
-      "groupName": "linting dependencies",
-      "groupSlug": "linting"
+      "groupName": "definitelyTyped",
+      "matchPackageNames": [
+        "@types/**"
+      ]
     },
     {
-      "matchPackagePatterns": [
-        "supertest", 
-        "nock", 
-        "mocha", 
-        "chai",
-        "sinon",
-        "vitest"
+      "extends": [
+        "monorepo:eslint"
       ],
-      "matchUpdateTypes": ["minor", "patch"],
-      "groupName": "test dependencies",
-      "groupSlug": "test"
+      "groupName": "eslint monorepo",
+      "matchUpdateTypes": [
+        "digest",
+        "patch",
+        "minor",
+        "major"
+      ]
     },
     {
-      "matchPackagePatterns": ["@types/*", "typescript", "tsx"],
-      "matchUpdateTypes": ["minor", "patch"],
-      "groupName": "typescript dependencies",
-      "groupSlug": "types"
+      "extends": [
+        "monorepo:typescript-eslint"
+      ],
+      "groupName": "typescript-eslint monorepo",
+      "matchUpdateTypes": [
+        "digest",
+        "patch",
+        "minor",
+        "major"
+      ]
+    },
+    {
+      "extends": [
+        "monorepo:eslint-stylistic"
+      ],
+      "groupName": "eslint-stylistic monorepo",
+      "matchUpdateTypes": [
+        "digest",
+        "patch",
+        "minor",
+        "major"
+      ]
     }
   ],
   "pinVersions": false
