@@ -1,65 +1,19 @@
 {
   "extends": [
-    "config:recommended", 
-    "schedule:monthly",
+    ":dependencyDashboard",
+    ":semanticPrefixFixDepsChoreOthers",
+    ":ignoreModulesAndTests",
     "group:monorepos",
-    
+    "group:recommended",
+    "replacements:all",
+    "workarounds:all",
+    "schedule:monthly"
   ],
-  "ignoreDeps": [
-    "pnpm",
-    "@types/node"
-  ],
-  "enabledManagers": ["pnpm"],
-  "semanticCommitType": "chore",
-  "labels": ["bot: dependencies"],
-  "packageRules": [
-    {
-      "packageNames": ["actions/*"],
-      "groupName": "all actions",
-      "groupSlug": "github-actions"
-    },
-    {
-      "groupName": "definitelyTyped",
-      "matchPackageNames": [
-        "@types/**"
-      ]
-    },
-    {
-      "extends": [
-        "monorepo:eslint"
-      ],
-      "groupName": "eslint monorepo",
-      "matchUpdateTypes": [
-        "digest",
-        "patch",
-        "minor",
-        "major"
-      ]
-    },
-    {
-      "extends": [
-        "monorepo:typescript-eslint"
-      ],
-      "groupName": "typescript-eslint monorepo",
-      "matchUpdateTypes": [
-        "digest",
-        "patch",
-        "minor",
-        "major"
-      ]
-    },
-    {
-      "extends": [
-        "monorepo:eslint-stylistic"
-      ],
-      "groupName": "eslint-stylistic monorepo",
-      "matchUpdateTypes": [
-        "digest",
-        "patch",
-        "minor",
-        "major"
-      ]
-    }
-  ],
-  "pinVersions": false
+  "lockFileMaintenance": {
+    "commitMessageAction": "update lockfile",
+    "extends": [
+      "group:all"
+    ]
+  },
+  "separateMajorMinor": true
 }
