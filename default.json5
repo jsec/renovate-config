@@ -1,19 +1,27 @@
 {
   "extends": [
     ":dependencyDashboard",
-    ":semanticPrefixFixDepsChoreOthers",
+    ":semanticPrefixChore",
     ":ignoreModulesAndTests",
+    ":disablePeerDependencies",
     "group:monorepos",
     "group:recommended",
     "replacements:all",
     "workarounds:all",
+    "helpers:disableTypesNodeMajor",
+    "helpers:pinGitHubActionDigests",
     "schedule:monthly"
   ],
+  "baseBranches": ["develop"],
+  "rebaseWhen": "conflicted",
+  "labels": ["dependencies"],
+  "rangeStrategy": "bump",
+  "postUpdateOptions": ["npmDedupe", "pnpmDedupe", "yarnDedupeFewer"],
+  "separateMajorMinor": true,
   "lockFileMaintenance": {
-    "commitMessageAction": "update lockfile",
+    "commitMessageAction": "lockfile maintenance",
     "extends": [
       "group:all"
     ]
-  },
-  "separateMajorMinor": true
+  }
 }
