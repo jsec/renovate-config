@@ -1,16 +1,14 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
+    "config:recommended",
     ":dependencyDashboard",
     ":semanticPrefixChore",
-    ":ignoreModulesAndTests",
-    ":disablePeerDependencies",
-    "group:monorepos",
-    "group:recommended",
     "replacements:all",
     "workarounds:all",
     "helpers:disableTypesNodeMajor",
     "helpers:pinGitHubActionDigests",
-    "schedule:monthly"
+    "schedule:weekends"
   ],
   "baseBranches": ["develop"],
   "rebaseWhen": "conflicted",
@@ -23,5 +21,55 @@
     "extends": [
       "group:all"
     ]
-  }
+  },
+  "vulnerabilityAlerts": {
+    "enabled": false
+  },
+  "packageRules": [
+    {
+      "groupName": "database",
+      "matchPackageNames": [
+        "pg",
+        "drizzle-orm",
+        "drizzle-kit",
+        "kysely",
+        "kysely-codegen"
+    },
+    {
+      "groupName": "tanstack",
+      "matchPackageNames": [
+        "@tanstack/react-query",
+        "@tanstack/react-query-devtools",
+        "@tanstack/devtools-vite",
+        "@tanstack/react-devtools"
+      ]
+    },
+    {
+      "groupName": "linting",
+      "matchPackageNames": [
+        "prettier",
+        "eslint",
+        "typescript-eslint",
+        "@jarsec/eslint-config",
+        "@jarsec/biome-config",
+        "@jarsec/oxlint-config"
+    },
+    {
+      "groupName": "typescript",
+      "matchPackageNames": [
+        "typescript",
+        "tsx",
+        "tsdown",
+        "@jarsec/tsconfig"
+      ]
+    },
+    {
+      "groupName": "react",
+      "matchPackageNames": [
+        "react",
+        "react-dom",
+        "@types/react",
+        "@types/react-dom"
+    }
+  ]
 }
