@@ -14,6 +14,8 @@ jobs:
 
     - name: Setup Node
       uses: actions/setup-node@v4
+      with:
+        node-version: 24
 
     - name: Validate default.json
       run: npx --yes --package renovate -- renovate-config-validator --strict default.json
