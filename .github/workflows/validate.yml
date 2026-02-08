@@ -1,0 +1,22 @@
+name: Validate Configs
+
+on:
+  push:
+    branches: [ "develop" ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
+
+    - name: Setup Node
+      uses: actions/setup-node@v4
+
+    - name: Validate default.json
+      run: npx --yes --package renovate -- renovate-config-validator --strict default.json
+
+    - name: Validate default.json5
+      run: npx --yes --package renovate -- renovate-config-validator --strict default.json5
