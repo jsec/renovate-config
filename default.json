@@ -37,7 +37,8 @@
                 "drizzle-orm",
                 "drizzle-kit",
                 "kysely",
-                "kysely-codegen"
+                "kysely-codegen",
+                "@types/pg"
             ]
         },
         {
@@ -54,19 +55,46 @@
             "matchPackageNames": [
                 "prettier",
                 "eslint",
-                "typescript-eslint",
+                "oxlint",
+                "@biomejs/biome",
                 "@jarsec/eslint-config",
                 "@jarsec/biome-config",
                 "@jarsec/oxlint-config"
             ]
         },
         {
+            "groupName": "lint plugins",
+            "matchPackageNames": [
+                "eslint-plugin-n",
+                "eslint-plugin-react",
+                "eslint-plugin-react-hooks",
+                "eslint-plugin-unicorn",
+                "eslint-plugin-react-hooks",
+                "eslint-plugin-perfectionist",
+                "@stylistic/eslint-plugin"
+            ]
+        },
+        {
             "groupName": "typescript",
             "matchPackageNames": [
                 "typescript",
+                "typescript-eslint"
+            ]
+        },
+        {
+            "groupName": "typescript tooling",
+            "matchPackageNames": [
                 "tsx",
                 "tsdown",
                 "@jarsec/tsconfig"
+            ]
+        },
+        {
+            "groupName": "tailwind",
+            "matchPackageNames": [
+                "@tailwindcss/vite",
+                "tailwindcss",
+                "tw-animate-css"
             ]
         },
         {
