@@ -31,7 +31,7 @@
     },
     "packageRules": [
         {
-            "groupName": "database",
+            "groupName": "database tools",
             "matchPackageNames": [
                 "pg",
                 "drizzle-orm",
@@ -42,7 +42,7 @@
             ]
         },
         {
-            "groupName": "tanstack",
+            "groupName": "Tanstack",
             "matchPackageNames": [
                 "@tanstack/react-query",
                 "@tanstack/react-query-devtools",
@@ -51,38 +51,36 @@
             ]
         },
         {
-            "groupName": "linting",
+            "groupName": "eslint",
             "matchPackageNames": [
-                "prettier",
                 "eslint",
-                "oxlint",
-                "@biomejs/biome",
-                "@jarsec/eslint-config",
-                "@jarsec/biome-config",
-                "@jarsec/oxlint-config"
+                "@jarsec/eslint-config"
             ]
         },
         {
-            "groupName": "lint plugins",
+            "groupName": "Biome",
             "matchPackageNames": [
-                "eslint-plugin-n",
-                "eslint-plugin-react",
-                "eslint-plugin-react-hooks",
-                "eslint-plugin-unicorn",
-                "eslint-plugin-react-hooks",
-                "eslint-plugin-perfectionist",
-                "@stylistic/eslint-plugin"
+                "@biomejs/biome",
+                "@jarsec/biome-config"
             ]
         },
         {
-            "groupName": "typescript",
+            "groupName": "oxc tools",
+            "matchPackageNames": [
+                "oxlint",
+                "@jarsec/oxlint-config",
+                "oxfmt"
+            ]
+        },
+        {
+            "groupName": "TypeScript",
             "matchPackageNames": [
                 "typescript",
                 "typescript-eslint"
             ]
         },
         {
-            "groupName": "typescript tooling",
+            "groupName": "TypeScript tooling",
             "matchPackageNames": [
                 "tsx",
                 "tsdown",
@@ -90,7 +88,7 @@
             ]
         },
         {
-            "groupName": "tailwind",
+            "groupName": "Tailwind",
             "matchPackageNames": [
                 "@tailwindcss/vite",
                 "tailwindcss",
@@ -98,7 +96,7 @@
             ]
         },
         {
-            "groupName": "react",
+            "groupName": "React",
             "matchPackageNames": [
                 "react",
                 "react-dom",
