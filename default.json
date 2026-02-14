@@ -97,6 +97,13 @@
                 "@types/react",
                 "@types/react-dom"
             ]
+        },
+        {
+            "groupName": "Hono",
+            "matchPackageNames": [
+                "hono",
+                "@hono/node-server"
+            ]
         }
     ]
 }
