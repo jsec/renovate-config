@@ -51,9 +51,10 @@
             ]
         },
         {
-            "groupName": "eslint",
+            "groupName": "Eslint",
             "matchPackageNames": [
                 "eslint",
+                "typescript-eslint",
                 "@jarsec/eslint-config"
             ]
         },
@@ -70,13 +71,6 @@
                 "oxlint",
                 "@jarsec/oxlint-config",
                 "oxfmt"
-            ]
-        },
-        {
-            "groupName": "TypeScript",
-            "matchPackageNames": [
-                "typescript",
-                "typescript-eslint"
             ]
         },
         {
