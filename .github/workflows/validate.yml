@@ -19,6 +19,3 @@ jobs:
 
     - name: Validate default.json
       run: npx --yes --package renovate -- renovate-config-validator --strict default.json
-
-    - name: Validate default.json5
-      run: npx --yes --package renovate -- renovate-config-validator --strict default.json5
