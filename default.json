@@ -29,6 +29,12 @@
     "vulnerabilityAlerts": {
         "enabled": false
     },
+    "major": {
+        "minimumReleaseAge": "30 days"
+    },
+    "minor": {
+        "minimumReleaseAge": "7 days"
+    },
     "packageRules": [
         {
             "groupName": "database tools",
